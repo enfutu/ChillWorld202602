@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SeashoreTransparentNoTessNoGrab
+  m_Shader: {fileID: 4800000, guid: a31956ce0d6e1bb46a25496460411bec, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - DEBUG_BORDER
+  - FORM_SHADOW
+  - _NORMALMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FormMask:
+        m_Texture: {fileID: 2800000, guid: ff8be4f2e0d3d0d4f8c51062dd915171, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: f56cbe66786f2d44cba0f76fcaa17e65, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterGradient:
+        m_Texture: {fileID: 2800000, guid: b872a2818cc64a14caa63a4e69afa5b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints:
+    - _FrontWaveNoiseLevel: 1
+    - _NoiseOctaves: 1
+    - _NumberOfWaves: 6
+    - _SwellZoneBuffer: 3
+    - _TimeDistortionNoiseLevel: 1
+    m_Floats:
+    - _ApplySunSpecular: 0
+    - _AttenuationScale: 0.01
+    - _BackFormLength: 50
+    - _BackwashVelocity: 0.02
+    - _BackwashVelocityRange: 0.002
+    - _BeachSlope: 0.01
+    - _DebugDividerLine: 0
+    - _DebugPreviewMask: 0
+    - _DebugTriangle: 0
+    - _DebugWaveHeightVisualize: 0
+    - _FarWaveDecayDistance: 50
+    - _FarWaveHeight: 2.64
+    - _FrontWaveWidth: 64
+    - _Interval: 20
+    - _ManualTimeOffset: 0
+    - _NormalAmount: 0.2
+    - _ReflectionIntensity: 1
+    - _SeaLevel: 0.2
+    - _SideScrollOffset: 0
+    - _SideScrollSpeed: 0
+    - _SourceAngleCos: 0.9999891
+    - _SunBrightnessMultiplier: 10
+    - _TimeDistortionPower: 1.5
+    - _TimeDistortionWidth: 0.05
+    - _TimeScale: 0.175
+    - _WaveBreakThreshold: 0.5
+    - _WavePower: 3.52
+    - _WaveWidth: 30
+    m_Colors: []
+  m_BuildTextureStacks: []

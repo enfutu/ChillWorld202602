@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Seashore
+  m_Shader: {fileID: 4800000, guid: 9b8b6d27b402bbf459c12759c76041e3, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - DEBUG_BORDER
+  - _NORMALMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FormMask:
+        m_Texture: {fileID: 2800000, guid: ff8be4f2e0d3d0d4f8c51062dd915171, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GroundTex:
+        m_Texture: {fileID: 2800000, guid: 2b27dbc2e51ad7c49988cb87637208da, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: f56cbe66786f2d44cba0f76fcaa17e65, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterGradient:
+        m_Texture: {fileID: 2800000, guid: b872a2818cc64a14caa63a4e69afa5b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints:
+    - _FrontWaveNoiseLevel: 2
+    - _NoiseOctaves: 4
+    - _NumberOfWaves: 6
+    - _SwellZoneBuffer: 5
+    - _TimeDistortionNoiseLevel: 2
+    m_Floats:
+    - _ApplySunSpecular: 0
+    - _AttenuationScale: 0.01
+    - _BackFormLength: 15
+    - _BackwashVelocity: 0.02
+    - _BackwashVelocityRange: 0.002
+    - _BeachSlope: 0.01
+    - _DebugDividerLine: 0
+    - _DebugPreviewMask: 0
+    - _DebugTriangle: 0
+    - _DebugWaveHeightVisualize: 0
+    - _FarWaveDecayDistance: 500
+    - _FarWaveHeight: 3.5
+    - _FormShadow: 0
+    - _FrontWaveWidth: 64
+    - _Interval: 80
+    - _InvIOR: 0.7518797
+    - _ManualTimeOffset: 13.648145
+    - _MaxTessellationFactor: 10
+    - _NormalAmount: 0.5
+    - _ReflectionIntensity: 1
+    - _SeaLevel: 0.05
+    - _SideScrollOffset: -15338.023
+    - _SideScrollSpeed: 5
+    - _SourceAngleCos: 0.9999891
+    - _SpecularSoftEdge: 0.0005
+    - _Steepness: 1000
+    - _SunBrightnessMultiplier: 10
+    - _TessellationFalloffExponent: 0.00003
+    - _TessellationFalloffThreshold: 156
+    - _TimeDistortionPower: 1.5
+    - _TimeDistortionWidth: 0.05
+    - _TimeScale: 0.05
+    - _WaveBreakThreshold: 0.449
+    - _WavePower: 0.2
+    - _WaveWidth: 94
+    m_Colors:
+    - _WetGroundTint: {r: 1, g: 1, b: 1, a: 0.34901962}
+  m_BuildTextureStacks: []
