@@ -1,0 +1,289 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grass
+  m_Shader: {fileID: 4800000, guid: e3523157955a8ed4fbd53d6e3ebf655e, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _CLOUDS
+  - _GRASS_ENABLE_SHADOW_PASS
+  - _GRASS_G
+  - _GRASS_R
+  m_InvalidKeywords:
+  - BOTTOM_SURFACE_ALIGN
+  - GRASS_A2C
+  - GRASS_PBR
+  - GRASS_PBR_EMISSION
+  - GRASS_PBR_NS
+  - _TEXMODE_B_SINGLE
+  - _TEXMODE_G_ARRAY_RANDOM
+  - _TEXMODE_R_SINGLE
+  - _USEARRAY1_ON
+  - _USEARRAY2_ON
+  - _USE_CLOUDS
+  - _USE_SSS
+  - _ZWRITE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CloudsTex:
+        m_Texture: {fileID: 2800000, guid: fedd811d7918fe44aa6d47e266da2703, type: 3}
+        m_Scale: {x: 0.001, y: 0.001}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassArrayB:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassArrayG:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassArrayR:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTexB:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTexG:
+        m_Texture: {fileID: 2800000, guid: e8151bd344fff2f4cad6821c81a4b2fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTexR:
+        m_Texture: {fileID: 2800000, guid: 3daf5f4c70e523c47a723805b4ba0255, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMaskTex:
+        m_Texture: {fileID: 8400000, guid: 52e47a86a3c10f34abcd6282913059a3, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 66e8f6eeffd054a458e654f8109f5fd1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 8400000, guid: 52e47a86a3c10f34abcd6282913059a3, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: cd14613d6b1fe6841890e5c2111473e8, type: 3}
+        m_Scale: {x: 0.001, y: 0.001}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PbrTex:
+        m_Texture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TrailTex:
+        m_Texture: {fileID: 8600000, guid: bd717442ed74f6648bf99aaca996dab6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _A2C: 1
+    - _Align: 1
+    - _AlignBottomToSurface: 1
+    - _AlphaSharpness: 3.6
+    - _ArrayCountB: 1
+    - _ArrayCountG: 1
+    - _ArrayCountR: 1
+    - _BendRandom: 0.5
+    - _BendRandomB: 0
+    - _BendRandomG: 0.5
+    - _BendRandomR: 0.5
+    - _BladeHeight: 1
+    - _BladeHeightB: 1.5
+    - _BladeHeightG: 0.8
+    - _BladeHeightR: 1
+    - _BladeWidth: 1
+    - _BladeWidthB: 1.5
+    - _BladeWidthG: 2
+    - _BladeWidthR: 1.5
+    - _BottomBlending: 0
+    - _BottomFade: 0.877
+    - _BumpScale: 1
+    - _CellSize: 0.5
+    - _CellsPerSide: 129
+    - _ClipBrightness: 1
+    - _CloudsBrightness: 1.2
+    - _CloudsDarkness: 0.7
+    - _CloudsMasking: 0.613
+    - _CloudsScale: 0.002
+    - _CloudsSharpness: 0.6
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DisableShadowPass: 0
+    - _DrawDistance: 50
+    - _DstBlend: 0
+    - _EdgeCulling: 0.5
+    - _EdgeFade: 0.35
+    - _EdgeSimplifying: 0.8
+    - _EdgeSimplifyingFade: 0.25
+    - _EdgeSoftness: 0
+    - _EdgeVisibleAmount: 0.237
+    - _EdgeVisibleAmountFade: 1
+    - _EnableClouds: 1
+    - _EnableSSS: 0
+    - _EnableTrail: 0
+    - _EnableTripleCross: 0
+    - _EnableTypeB: 0
+    - _EnableTypeG: 1
+    - _EnableTypeR: 1
+    - _FitUVToTriangle: 0.2
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HeightOffsetLimit: 1.98
+    - _MapSize: 20
+    - _MaskThreshold: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Pbr: 1
+    - _PbrEmission: 1
+    - _PbrNS: 1
+    - _PbrSSS: 0
+    - _RTForwardShift: 0
+    - _RTSize: 40
+    - _Radius: 10
+    - _SSSBrightness: 0.8
+    - _SSSPower: 0
+    - _SSSRadius: 1.2
+    - _SSSSharpness: 1
+    - _SSSStrength: 1
+    - _ShadowPassDepthWrite: 1
+    - _SheetCols1: 2
+    - _SheetCols2: 1
+    - _SheetCols3: 4
+    - _SheetCount1: 4
+    - _SheetCount2: 1
+    - _SheetCount3: 5
+    - _SheetMode1: 0
+    - _SheetMode2: 0
+    - _SheetMode3: 1
+    - _SheetRows1: 2
+    - _SheetRows2: 1
+    - _SheetRows3: 4
+    - _SizeA: 0.75
+    - _SizeB: 5.99
+    - _SizeRandom: 0.4
+    - _SizeRandomB: 0.182
+    - _SizeRandomG: 1
+    - _SizeRandomR: 0.284
+    - _SizeThreshold: 0.078
+    - _SizeWidthImpact: 0.5
+    - _SizeWidthImpactB: 1
+    - _SizeWidthImpactG: 0.48
+    - _SizeWidthImpactR: 1
+    - _Smoothness: 0.687
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TextureModeB: 0
+    - _TextureModeG: 0
+    - _TextureModeR: 0
+    - _TrailBend: 1.21
+    - _TrailBrightness: 0.7
+    - _UVPadding: 0.3
+    - _UVPaddingB: 0.302
+    - _UVPaddingG: 0.847
+    - _UVPaddingR: 1
+    - _UVSec: 0
+    - _UseClouds: 1
+    - _UseSSS: 1
+    - _VisibleAmount: 1
+    - _WindAmp: 2.48
+    - _WindAmp1: 0.6
+    - _WindAmp2: 0.3
+    - _WindAmp3: 0.2
+    - _WindFreq1: 0.1
+    - _WindFreq2: 1
+    - _WindFreq3: 10
+    - _WindPower: 1
+    - _WindPowerB: 1
+    - _WindPowerG: 0.3
+    - _WindPowerR: 0.3
+    - _WindSpeed1: 1
+    - _WindSpeed2: 2.1
+    - _WindSpeed3: 4
+    - _WindTexScale: 0.05
+    - _WindTipOnly: 0
+    - _YBias: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0.6573039, g: 0.7735849, b: 0.42474183, a: 1}
+    - _CloudsDir: {r: -5, g: 0, b: -10, a: 0}
+    - _Color: {r: 0.68897355, g: 0.90943396, b: 0.3963759, a: 1}
+    - _ColorA: {r: 0.45248792, g: 0.5849056, b: 0.21961544, a: 1}
+    - _ColorB: {r: 0.50104976, g: 0.735849, b: 0.23741543, a: 1}
+    - _ColorHigh: {r: 0.5589144, g: 0.71099997, b: 0.27755615, a: 1}
+    - _ColorHighB: {r: 1, g: 0.7150943, b: 0.9121372, a: 1}
+    - _ColorHighG: {r: 0.8584906, g: 0.79740226, b: 0.58717513, a: 1}
+    - _ColorHighR: {r: 0.73320365, g: 0.8113208, b: 0.13394445, a: 1}
+    - _ColorLow: {r: 0.3633333, g: 0.545, b: 0.13793209, a: 1}
+    - _ColorLowB: {r: 0.98972744, g: 1, b: 0.98679245, a: 1}
+    - _ColorLowG: {r: 0.509434, g: 0.46207067, b: 0.3051798, a: 1}
+    - _ColorLowR: {r: 0.45964268, g: 0.49056602, b: 0.3771805, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PlayerPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _RTCenterWS: {r: 0, g: 0, b: 0, a: 0}
+    - _SSSColor: {r: 1, g: 0.9148424, b: 0.5641509, a: 1}
+    - _WindDir1: {r: -5, g: 0, b: -10, a: 0}
+    - _WindDir2: {r: -2, g: 0, b: -5, a: 0}
+    - _WindDir3: {r: -1, g: 0, b: 0.5, a: 0}
+  m_BuildTextureStacks: []

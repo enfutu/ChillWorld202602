@@ -365,7 +365,7 @@ Material:
     - _RippleSpeed: 10
     - _RippleStrength: 10
     - _RoughnessChannel: 1
-    - _RoughnessStrength: 1
+    - _RoughnessStrength: 0.8
     - _SSREdgeFade: 0.1
     - _SSRHeight: 0.2
     - _SSRStrength: 1
@@ -454,8 +454,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5943396, g: 0.5378805, b: 0.51303846, a: 1}
-    - _DetailColor: {r: 0.50146854, g: 0.5566038, b: 0.51292795, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LTCGI_DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
     - _LTCGI_SpecularColor: {r: 1, g: 1, b: 1, a: 1}

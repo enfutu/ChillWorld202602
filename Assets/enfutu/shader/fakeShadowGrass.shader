@@ -3,9 +3,9 @@ Shader "enfutu/fakeShadowGrass"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _MainColor ("メインカラー",  Color) = (0,0,0,0) 
-        _BottomColor ("根の色", Color) = (0,0,0,0)
-        _Vectle ("動く方向", Vector) = (0,0,0,0)
+        _MainColor ("maincolor",  Color) = (0,0,0,0) 
+        _BottomColor ("rootcolor", Color) = (0,0,0,0)
+        _Vectle ("windvec", Vector) = (0,0,0,0)
     }
     SubShader
     {
@@ -51,7 +51,7 @@ Shader "enfutu/fakeShadowGrass"
 
             sampler2D _MainTex;
             float4 _MainTex_ST, _BottomColor, _MainColor;
-            float3 _Vectle;
+            float4 _Vectle;
             fixed4 _LightColor0;
 
             float random (fixed2 p) { 
@@ -82,7 +82,7 @@ Shader "enfutu/fakeShadowGrass"
                 //揺らす
                 float3 p0 = mul(unity_ObjectToWorld, float4(0,0,0,1));
                 float rand = random(p0.xz) * 11;
-                wv.xyz += sin(_Time.y * 5 + rand * 5) * (.001 + rand * .002) * g * _Vectle; 
+                wv.xyz += sin(_Time.y * 2 + rand * 10) * (.001 + rand * .001) * g * _Vectle.xyz * _Vectle.w; 
 
                 v.vertex.xyz = mul(unity_WorldToObject, float4(wv,1));
 
@@ -107,7 +107,6 @@ Shader "enfutu/fakeShadowGrass"
 
                 col *= _LightColor0 * _MainColor;
                 
-
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;

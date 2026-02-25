@@ -1,0 +1,18 @@
+{
+    "name": "red.sim.InfiniteGrass.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e37ea6697d8d02a4f84b245393954749"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

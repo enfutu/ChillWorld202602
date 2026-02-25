@@ -197,8 +197,8 @@ Material:
     - _TexCoordSpace: 1
     - _TexCoordSpaceSwizzle: 0
     - _UVSec: 0
-    - _XScale: 0.8
-    - _YScale: 0.8
+    - _XScale: 2
+    - _YScale: 2
     - _ZWrite: 0
     m_Colors:
     - _BaseColorTint: {r: 1, g: 1, b: 1, a: 1}

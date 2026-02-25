@@ -1,0 +1,19 @@
+{
+    "name": "red.sim.InfiniteGrass.Udon.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c32427720dcd85f45b4622f3d48279b1",
+        "GUID:99835874ee819da44948776e0df4ff1d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

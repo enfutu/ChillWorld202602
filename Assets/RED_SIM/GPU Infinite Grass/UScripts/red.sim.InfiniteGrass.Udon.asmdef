@@ -1,0 +1,17 @@
+{
+    "name": "red.sim.InfiniteGrass.Udon",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e37ea6697d8d02a4f84b245393954749",
+        "GUID:99835874ee819da44948776e0df4ff1d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

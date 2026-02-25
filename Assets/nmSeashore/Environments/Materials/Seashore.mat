@@ -30,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundTex:
-        m_Texture: {fileID: 2800000, guid: 2b27dbc2e51ad7c49988cb87637208da, type: 3}
+        m_Texture: {fileID: 2800000, guid: acfa433ac2192bd44aee0272cd9a74ed, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
@@ -84,5 +84,5 @@ Material:
     - _WavePower: 0.2
     - _WaveWidth: 94
     m_Colors:
-    - _WetGroundTint: {r: 1, g: 1, b: 1, a: 0.34901962}
+    - _WetGroundTint: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 0.57254905}
   m_BuildTextureStacks: []
