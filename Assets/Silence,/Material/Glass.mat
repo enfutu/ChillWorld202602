@@ -144,7 +144,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _DynamicDroplets: 0.2
+    - _DynamicDroplets: 0
     - _GSAAStrength: 1
     - _GSAAToggle: 0
     - _GlobalTexCoordScale: 1
@@ -156,7 +156,7 @@ Material:
     - _LTCGIStrength: 1
     - _LitBaseColor: 1
     - _MaterialResetCheck: 1
-    - _Metallic: 0.1
+    - _Metallic: 0.01
     - _Mode: 3
     - _NormalStrength: 1
     - _Occlusion: 1
@@ -190,7 +190,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularStrength: 1
     - _SpecularToggle: 1
-    - _Speed: 30
+    - _Speed: 10
     - _SrcBlend: 1
     - _Strength: 0.3
     - _Test: 1

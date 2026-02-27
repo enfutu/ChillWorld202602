@@ -35,6 +35,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColor: {r: 0.27118903, g: 0.3207547, b: 0.18307225, a: 1}
+    - _MainColor: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
     - _Vectle: {r: 1, g: 0, b: 2, a: 10}
   m_BuildTextureStacks: []

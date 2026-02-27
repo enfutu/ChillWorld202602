@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHABLEND_ON
+  - _ALPHATEST_ON
   - _BICUBIC_SAMPLING_ON
   - _DETAIL_NORMAL_ON
   - _NORMALMAP_ON
@@ -23,9 +23,9 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2451
   stringTagMap:
-    RenderType: Transparent
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - ALWAYS
   m_LockedProperties: 
@@ -220,7 +220,7 @@ Material:
     - _AlphaMaskChannel: 0
     - _AlphaMaskOpacity: 1
     - _AlphaSource: 0
-    - _AlphaToMask: 0
+    - _AlphaToMask: 1
     - _ApplyHeightOffset: 0
     - _AreaLitOcclusionUVSet: 0
     - _AreaLitRoughnessMultiplier: 1
@@ -237,7 +237,7 @@ Material:
     - _BakeryLMSpecStrength: 1
     - _BakeryMode: 0
     - _BicubicSampling: 1
-    - _BlendMode: 2
+    - _BlendMode: 1
     - _Brightness: 1
     - _BrightnessDet: 1
     - _BrightnessEmiss: 1
@@ -271,7 +271,7 @@ Material:
     - _DetailRoughnessStrength: 1
     - _DetailSampleMode: 0
     - _DetailWorkflow: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _DynamicDroplets: 0.4
     - _EmissionMaskChannel: 0
     - _EmissionPulseSpeed: 1
@@ -342,7 +342,7 @@ Material:
     - _PuddleTintDepth: 0
     - _PuddleToggle: 0
     - _PuddleUseHeightMap: 0
-    - _QueueOffset: 0
+    - _QueueOffset: 1
     - _RainColumns: 8
     - _RainMaskChannel: 0
     - _RainMode: 0
@@ -391,7 +391,7 @@ Material:
     - _SpecularOcclusionHDR: 1
     - _SpecularOcclusionStrength: 1
     - _SpecularOcclusionToggle: 0
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Subsurface: 0
     - _ThicknessMapPower: 1
     - _ThisValueIsZero: 0
@@ -448,7 +448,7 @@ Material:
     - _WindToggle: 0
     - _WrappingFactor: 0.01
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}

@@ -43,46 +43,46 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints:
     - _FrontWaveNoiseLevel: 2
-    - _NoiseOctaves: 4
-    - _NumberOfWaves: 6
+    - _NoiseOctaves: 5
+    - _NumberOfWaves: 16
     - _SwellZoneBuffer: 5
     - _TimeDistortionNoiseLevel: 2
     m_Floats:
     - _ApplySunSpecular: 0
-    - _AttenuationScale: 0.01
-    - _BackFormLength: 15
-    - _BackwashVelocity: 0.02
+    - _AttenuationScale: 0.1
+    - _BackFormLength: 264
+    - _BackwashVelocity: 0.03
     - _BackwashVelocityRange: 0.002
     - _BeachSlope: 0.01
     - _DebugDividerLine: 0
     - _DebugPreviewMask: 0
     - _DebugTriangle: 0
     - _DebugWaveHeightVisualize: 0
-    - _FarWaveDecayDistance: 500
-    - _FarWaveHeight: 3.5
+    - _FarWaveDecayDistance: 129
+    - _FarWaveHeight: 10
     - _FormShadow: 0
     - _FrontWaveWidth: 64
     - _Interval: 80
     - _InvIOR: 0.7518797
     - _ManualTimeOffset: 13.648145
-    - _MaxTessellationFactor: 10
+    - _MaxTessellationFactor: 1
     - _NormalAmount: 0.5
     - _ReflectionIntensity: 1
     - _SeaLevel: 0.05
     - _SideScrollOffset: -15338.023
-    - _SideScrollSpeed: 5
+    - _SideScrollSpeed: 1
     - _SourceAngleCos: 0.9999891
     - _SpecularSoftEdge: 0.0005
-    - _Steepness: 1000
+    - _Steepness: 0
     - _SunBrightnessMultiplier: 10
-    - _TessellationFalloffExponent: 0.00003
-    - _TessellationFalloffThreshold: 156
+    - _TessellationFalloffExponent: 0.000001
+    - _TessellationFalloffThreshold: 100
     - _TimeDistortionPower: 1.5
-    - _TimeDistortionWidth: 0.05
+    - _TimeDistortionWidth: 0.02
     - _TimeScale: 0.05
-    - _WaveBreakThreshold: 0.449
-    - _WavePower: 0.2
-    - _WaveWidth: 94
+    - _WaveBreakThreshold: 0.75
+    - _WavePower: 5
+    - _WaveWidth: 200
     m_Colors:
-    - _WetGroundTint: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 0.57254905}
+    - _WetGroundTint: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.57254905}
   m_BuildTextureStacks: []

@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _CLOUDS
-  - _GRASS_ENABLE_SHADOW_PASS
   - _GRASS_G
   - _GRASS_R
   m_InvalidKeywords:
@@ -206,7 +205,7 @@ Material:
     - _SSSRadius: 1.2
     - _SSSSharpness: 1
     - _SSSStrength: 1
-    - _ShadowPassDepthWrite: 1
+    - _ShadowPassDepthWrite: 0
     - _SheetCols1: 2
     - _SheetCols2: 1
     - _SheetCols3: 4

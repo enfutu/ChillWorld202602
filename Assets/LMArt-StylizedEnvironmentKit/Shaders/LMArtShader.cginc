@@ -23,7 +23,7 @@ float _UseAnimation, _UseSpecular, _UseNormal;
 sampler2D _TopTex, _MidTex, _BtmTex, _TopBumpMap, _MidBumpMap, _BtmBumpMap, _TopReflectMap, _MidReflectMap, _BtmReflectMap;
 
 fixed _TopBumpScale, _MidBumpScale, _BtmBumpScale, _BlendFactor, _TopUVScale, _MidUVScale, _BtmUVScale, _TopReflectScale, _MidReflectScale, _BtmReflectScale;
-float4 _TopTex_ST, _MidTex_ST, _BtmTex_ST;
+float4 _TopTex_ST, _MidTex_ST, _BtmTex_ST, _MainColor;
 float _TopWorldUV, _MidWorldUV, _BtmWorldUV, _UseReflection;
 fixed3 _ReflectionColor;
 
@@ -187,15 +187,15 @@ inline fixed4 computeLFCol(fixed4 col, half3 ambient, half3 lightDir, half3 wNor
 	nlr = smoothstep(_TransArea, 1, nlr);
 
 	half3 diffuse = nl * _LightColor0.rgb * lightCal + ambient;
-	half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr * lightCal);
-	half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
-		* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
-	Translucency = lerp(fixed3(0, 0, 0), Translucency, lightCal);
+	//half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb/* * transTex * _TransColor.rgb*/, nlr * lightCal);
+	//half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
+	//	* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
+	//Translucency = lerp(fixed3(0, 0, 0), Translucency, lightCal);
 
 	col.rgb *= diffuse;
 	col.rgb += specular;
-	col.rgb += trans;
-	col.rgb += Translucency;
+	//col.rgb += trans;
+	//col.rgb += Translucency;
 
 	return col;
 }
@@ -208,15 +208,15 @@ inline fixed3 lightmapLFCol(fixed3 col, half3 lightDir, half3 wNormal, fixed lig
 	nlr = smoothstep(_TransArea, 1, nlr);
 
 	half3 diffuse = nl * _LightColor0.rgb * lightmask * lightCal + lightmap;
-	half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr * lightCal);
-	half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
-		* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
-	Translucency = lerp(fixed3(0, 0, 0), Translucency, lightCal);
+	//half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr * lightCal);
+	//half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
+	//	* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
+	//Translucency = lerp(fixed3(0, 0, 0), Translucency, lightCal);
 
 	col.rgb *= diffuse;
 	col.rgb += specular;
-	col.rgb += trans;
-	col.rgb += Translucency;
+	//col.rgb += trans;
+	//col.rgb += Translucency;
 
 	return col;
 }
@@ -307,15 +307,15 @@ inline fixed4 computeTFCol(fixed4 col, half3 ambient, half3 lightDir, half3 wNor
 	nlr = smoothstep(_TransArea, 1, nlr) * lightCal;
 
 	half3 diffuse = nl * _LightColor0.rgb * lightCal + ambient;
-	half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr);
-	half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
-		* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
-	Translucency = lerp(fixed3(0, 0, 0), Translucency, nlr);
+	//half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr);
+	//half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
+	//	* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
+	//Translucency = lerp(fixed3(0, 0, 0), Translucency, nlr);
 
 	col.rgb *= diffuse;
 	col.rgb += specular;
-	col.rgb += trans;
-	col.rgb += Translucency;
+	//col.rgb += trans;
+	//col.rgb += Translucency;
 
 	return col;
 }
@@ -328,15 +328,15 @@ inline fixed3 lightmapTFCol(fixed3 col, half3 lightDir, half3 wNormal, fixed lig
 	nlr = smoothstep(_TransArea, 1, nlr) * lightCal;
 
 	half3 diffuse = nl * _LightColor0.rgb * lightmask * lightCal + lightmap;
-	half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr);
-	half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
-		* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
-	Translucency = lerp(fixed3(0, 0, 0), Translucency, nlr);
+	//half3 trans = lerp(fixed3(0, 0, 0), _LightColor0.rgb * transTex * _TransColor.rgb, nlr);
+	//half3 Translucency = _TransPower * _LightColor0.rgb * transTex * _TransColor.rgb
+	//	* pow(max(0.0, dot(lightDir, -wNormal)), _TransArea);
+	//Translucency = lerp(fixed3(0, 0, 0), Translucency, nlr);
 
 	col.rgb *= diffuse;
 	col.rgb += specular;
-	col.rgb += trans;
-	col.rgb += Translucency;
+	//col.rgb += trans;
+	//col.rgb += Translucency;
 
 	return col;
 }

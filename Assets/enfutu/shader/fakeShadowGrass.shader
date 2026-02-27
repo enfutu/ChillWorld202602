@@ -19,6 +19,7 @@ Shader "enfutu/fakeShadowGrass"
 
         Pass
         {
+            Tags { "LightMode"="ForwardBase" }
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -105,7 +106,7 @@ Shader "enfutu/fakeShadowGrass"
                 col.rgb = lerp(col.rgb, _BottomColor.rgb, i.value.y);
                 col.rgb *= i.value.x;
 
-                col *= _LightColor0 * _MainColor;
+                col *= _MainColor;
                 
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);

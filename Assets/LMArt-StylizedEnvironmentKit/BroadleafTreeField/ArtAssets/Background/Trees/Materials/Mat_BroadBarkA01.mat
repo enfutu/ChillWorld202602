@@ -2,20 +2,27 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_BroadBarkA01
-  m_Shader: {fileID: 4800000, guid: 55e9982f56a2f93419faa4c7ba208251, type: 3}
-  m_ShaderKeywords: USE_NM USE_RF _NORMALMAP
+  m_Shader: {fileID: 4800000, guid: 36a2815ad284ed7479e44e0798403758, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - USE_NM
+  - USE_RF
+  - _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -52,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b016b4650d213b64c9b1eaf96cfbdc97, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4a2e0b5e07b139642b49a232cd14d413, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -95,8 +102,9 @@ Material:
         m_Texture: {fileID: 2800000, guid: b016b4650d213b64c9b1eaf96cfbdc97, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-    - _BlendFactor: 0.113
+    - _BlendFactor: 0.216
     - _BtmBumpScale: 1
     - _BtmUVScale: 0.5
     - _BtmWorldUV: 0
@@ -132,7 +140,11 @@ Material:
     - _UseSpecular: 0
     - _ZWrite: 1
     m_Colors:
+    - _Center: {r: 20, g: 0, b: -140, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FogColor: {r: 0.06666075, g: 0.08119736, b: 0.13207549, a: 1}
+    - _MainColor: {r: 0.06666075, g: 0.08119736, b: 0.13207549, a: 1}
     - _ReflectionColor: {r: 0.12322001, g: 0.20478822, b: 0.3679245, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

@@ -67,7 +67,7 @@ MonoBehaviour:
   - {fileID: 0}
   SurfaceMeshes:
   - {fileID: 4300000, guid: bf585276888b318468f460e9ad99a49e, type: 2}
-  EnableTrail: 1
+  EnableTrail: 0
   TrailMaterial: {fileID: 2100000, guid: aa2dfda7849d4624895b30db271e059a, type: 2}
   TrailCRT: {fileID: 8600000, guid: bd717442ed74f6648bf99aaca996dab6, type: 2}
   TrailCRTResolution: 1024
@@ -77,8 +77,8 @@ MonoBehaviour:
   - {fileID: 0}
   ParticleMaterial: {fileID: 2100000, guid: acdc9dd28e1efa3458dc1a7e7b3d44ae, type: 2}
   RenderingLayer: 0
-  CastShadows: 1
-  ReceiveShadows: 1
+  CastShadows: 0
+  ReceiveShadows: 0
   DrawAmount: 75
   HeightTex: {fileID: 0}
 --- !u!114 &518379084941396306

@@ -8,6 +8,8 @@ Shader "LMArtShader/NatureLeaves"
 {
 	Properties
 	{
+		_MainColor("MainColor", Color) = (0,0,0,0)
+
 		[NoScaleOffset] _AlbedoTex("Albedo Tex", 2D) = "white" {}
 		_CutOff("Alpha Cutoff", Range(0,1)) = 0.5
 
@@ -149,6 +151,12 @@ Shader "LMArtShader/NatureLeaves"
 
 				fixed4 col = tex2D(_AlbedoTex, i.uv);
 
+				clip(col.a - _CutOff);
+				col.a = 1;
+
+				col.rgb = _MainColor;
+
+/*
 				half3 tNormal = UnpackScaleNormal(tex2D(_NormalMap, i.uv), _NormalScale);
 				half3 wNormal = worldNormalLF(i.tspace0, i.tspace1, i.tspace2, tNormal, facing);
 
@@ -190,8 +198,8 @@ Shader "LMArtShader/NatureLeaves"
 					col = computeLFCol(col, ambientFA, i.lightDir.xyz, wNormal, lightCal, specular, transTex);
 				#endif
 				
-				clip(col.a - _CutOff);
-				col.a = 1;
+*/
+
 
 				UNITY_APPLY_FOG(i.fogCoord, col);
 
@@ -290,6 +298,11 @@ Shader "LMArtShader/NatureLeaves"
 
 				fixed4 col = tex2D(_AlbedoTex, i.uv);
 
+				clip(col.a - _CutOff);
+				col.a = 1;
+
+				col.rgb = _MainColor;
+/*
 				half3 tNormal = UnpackScaleNormal(tex2D(_NormalMap, i.uv), _NormalScale);
 				half3 wNormal = worldNormalLF(i.tspace0, i.tspace1, i.tspace2, tNormal, facing);
 
@@ -306,10 +319,7 @@ Shader "LMArtShader/NatureLeaves"
 				#endif
 
 				col = computeLFCol(col, i.ambient, i.lightDir.xyz, wNormal, lightCal, specular, transTex * 0.6);
-	
-				clip(col.a - _CutOff);
-				col.a = 1;
-
+*/	
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;
 			}
@@ -379,6 +389,7 @@ Shader "LMArtShader/NatureLeaves"
 				clip(texcol.a - _CutOff);
 				texcol.a = 1;
 
+				texcol.rgb = _MainColor.rgb;
 				return texcol;
 
 			}
