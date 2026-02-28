@@ -146,7 +146,7 @@ Material:
     - _BendRandomR: 0.5
     - _BladeHeight: 1
     - _BladeHeightB: 1.5
-    - _BladeHeightG: 0.8
+    - _BladeHeightG: 0.6
     - _BladeHeightR: 1
     - _BladeWidth: 1
     - _BladeWidthB: 1.5
@@ -222,7 +222,7 @@ Material:
     - _SizeB: 5.99
     - _SizeRandom: 0.4
     - _SizeRandomB: 0.182
-    - _SizeRandomG: 1
+    - _SizeRandomG: 0.5
     - _SizeRandomR: 0.284
     - _SizeThreshold: 0.078
     - _SizeWidthImpact: 0.5
@@ -272,12 +272,12 @@ Material:
     - _ColorB: {r: 0.50104976, g: 0.735849, b: 0.23741543, a: 1}
     - _ColorHigh: {r: 0.5589144, g: 0.71099997, b: 0.27755615, a: 1}
     - _ColorHighB: {r: 1, g: 0.7150943, b: 0.9121372, a: 1}
-    - _ColorHighG: {r: 0.8584906, g: 0.79740226, b: 0.58717513, a: 1}
-    - _ColorHighR: {r: 0.73320365, g: 0.8113208, b: 0.13394445, a: 1}
+    - _ColorHighG: {r: 0.8962264, g: 0.8727885, b: 0.6975347, a: 1}
+    - _ColorHighR: {r: 0.5518868, g: 0.735849, b: 0.6120283, a: 1}
     - _ColorLow: {r: 0.3633333, g: 0.545, b: 0.13793209, a: 1}
     - _ColorLowB: {r: 0.98972744, g: 1, b: 0.98679245, a: 1}
-    - _ColorLowG: {r: 0.509434, g: 0.46207067, b: 0.3051798, a: 1}
-    - _ColorLowR: {r: 0.45964268, g: 0.49056602, b: 0.3771805, a: 1}
+    - _ColorLowG: {r: 0.17397548, g: 0.18867922, b: 0.12726948, a: 1}
+    - _ColorLowR: {r: 0.17254902, g: 0.18823531, b: 0.1254902, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PlayerPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RTCenterWS: {r: 0, g: 0, b: 0, a: 0}

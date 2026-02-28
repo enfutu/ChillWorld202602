@@ -74,7 +74,7 @@ MonoBehaviour:
     value: 0
   colorFilter:
     overrideState: 1
-    value: {r: 0.3051798, g: 0.40129942, b: 0.509434, a: 1}
+    value: {r: 0.745283, g: 0.6620363, b: 0.61521006, a: 1}
   hueShift:
     overrideState: 0
     value: 0
@@ -1344,10 +1344,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.8
+    value: 1
   threshold:
     overrideState: 1
-    value: 0.1
+    value: 0.5
   softKnee:
     overrideState: 0
     value: 0.5

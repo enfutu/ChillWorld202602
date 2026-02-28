@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - BAKERY_MONOSH
   - _ALPHATEST_ON
   - _BICUBIC_SAMPLING_ON
   - _DETAIL_NORMAL_ON
@@ -235,7 +236,7 @@ Material:
     - _BAKERY_LMSPEC: 0
     - _BAKERY_SHNONLINEAR: 0
     - _BakeryLMSpecStrength: 1
-    - _BakeryMode: 0
+    - _BakeryMode: 3
     - _BicubicSampling: 1
     - _BlendMode: 1
     - _Brightness: 1

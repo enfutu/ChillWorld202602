@@ -9,7 +9,12 @@ namespace nmSeashore
 {
 	public class SeashoreShaderGUI : ShaderGUI
 	{
-		MaterialProperty _TimeScale;
+		//Add
+		MaterialProperty _Center;
+		MaterialProperty _FogColor;
+
+
+        MaterialProperty _TimeScale;
 		MaterialProperty _ManualTimeOffset;
 		MaterialProperty _SideScrollSpeed;
 		MaterialProperty _SideScrollOffset;
@@ -131,6 +136,11 @@ namespace nmSeashore
 			{ "_DebugWaveHeightVisualize", "Wave Height Visualize" },
 			{ "_DebugPreviewMask", "Preview Mask" },
 			{ "_DebugDividerLine", "Border Line" }
+
+			//Add
+			,{ "_Center", "Center" }
+			,{ "_FogColor", "FogColor" }
+
 		};
 
 		private static readonly Dictionary<string, string> JapaneseText = new Dictionary<string, string>
@@ -182,7 +192,11 @@ namespace nmSeashore
 			{ "_DebugWaveHeightVisualize", "形状変化の流れ" },
 			{ "_DebugPreviewMask", "表示用マスクの計算" },
 			{ "_DebugDividerLine", "処理範囲ボーダーライン" }
-		};
+			
+			//Add
+			,{ "_Center", "Center" }
+            ,{ "_FogColor", "FogColor" }
+        };
 
 		Dictionary<string, string> lang;
 
@@ -280,7 +294,11 @@ namespace nmSeashore
 			}
 
 			AddHeader("General Settings");
-			
+
+			Add(_Center);
+			Add(_FogColor);
+
+
 			AddMiniTexture(_GroundTex);
 			if(_GroundTex != null)
 			{

@@ -2,6 +2,9 @@
 {
     Properties
     {
+		_Center ("Center", Vector) = (0,0,0,0) 
+		_FogColor ("FogColor", Color) = (0,0,0,0)
+
         _TimeScale ("Time Scale", Float) = 0.175
 		_ManualTimeOffset ("Manual Time Offset", Float) = 0
         _SideScrollSpeed ("Side Scroll Speed", Float) = 0
@@ -210,7 +213,7 @@
 				float formTex = tex2D(_FormMask, pos * 0.03333333 + normal.xy * 0.01).x;
 				float formBorderRamp = max(fwidth(formTex), 0.05);
 				float formAmount = smoothstep(formMask + formBorderRamp * saturate(1 - POW2(formMask * 2 - 1)), formMask - formBorderRamp, formTex);
-				col.rgb += formAmount;
+				col.rgb += formAmount * .02;
 				
 				// フレネル反射
 				float3 worldViewDir = UnityObjectToWorldDir(viewDir);
@@ -240,7 +243,13 @@
 				#if DEBUG_BORDER_LINE
 				col += showBorderLine(pos.x);
 				#endif
-				
+
+				//Add
+				float3 wv = mul(unity_ObjectToWorld, i.localPos);
+				float d = max(0, length(wv - _Center) - 150);
+                d = saturate(lerp(0, 1, d * .005));
+				col.rgb = lerp(col.rgb, _FogColor, d);
+
                 return col;
 			}
 	        ENDCG

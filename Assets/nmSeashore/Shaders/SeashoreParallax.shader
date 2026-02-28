@@ -2,6 +2,9 @@
 {
     Properties
     {
+		_Center ("Center", Vector) = (0,0,0,0)
+		_FogColor ("FogColor", Color) = (0,0,0,0)
+
         _TimeScale ("Time Scale", Float) = 0.175
 		_ManualTimeOffset ("Manual Time Offset", Float) = 0
         _SideScrollSpeed ("Side Scroll Speed", Float) = 0

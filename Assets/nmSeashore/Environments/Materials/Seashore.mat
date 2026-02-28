@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Seashore
-  m_Shader: {fileID: 4800000, guid: 9b8b6d27b402bbf459c12759c76041e3, type: 3}
+  m_Shader: {fileID: 4800000, guid: a31956ce0d6e1bb46a25496460411bec, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -44,13 +44,13 @@ Material:
     m_Ints:
     - _FrontWaveNoiseLevel: 2
     - _NoiseOctaves: 5
-    - _NumberOfWaves: 16
+    - _NumberOfWaves: 14
     - _SwellZoneBuffer: 5
     - _TimeDistortionNoiseLevel: 2
     m_Floats:
     - _ApplySunSpecular: 0
-    - _AttenuationScale: 0.1
-    - _BackFormLength: 264
+    - _AttenuationScale: 0.02
+    - _BackFormLength: 117
     - _BackwashVelocity: 0.03
     - _BackwashVelocityRange: 0.002
     - _BeachSlope: 0.01
@@ -66,8 +66,8 @@ Material:
     - _InvIOR: 0.7518797
     - _ManualTimeOffset: 13.648145
     - _MaxTessellationFactor: 1
-    - _NormalAmount: 0.5
-    - _ReflectionIntensity: 1
+    - _NormalAmount: 0.3
+    - _ReflectionIntensity: 3
     - _SeaLevel: 0.05
     - _SideScrollOffset: -15338.023
     - _SideScrollSpeed: 1
@@ -80,9 +80,12 @@ Material:
     - _TimeDistortionPower: 1.5
     - _TimeDistortionWidth: 0.02
     - _TimeScale: 0.05
+    - _WaterDistortionScale: 0.2
     - _WaveBreakThreshold: 0.75
-    - _WavePower: 5
+    - _WavePower: 1.5
     - _WaveWidth: 200
     m_Colors:
-    - _WetGroundTint: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.57254905}
+    - _Center: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColor: {r: 0, g: 0, b: 0, a: 0}
+    - _WetGroundTint: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.57254905}
   m_BuildTextureStacks: []
