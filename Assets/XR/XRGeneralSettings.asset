@@ -45,6 +45,23 @@ MonoBehaviour:
   - {fileID: -6533556812720218900}
   - {fileID: 8378615499934327563}
   - {fileID: -516698749479861364}
+--- !u!114 &2747213734359325030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Android Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: 6ff97c883417298408bb03340eaede0a, type: 2}
 --- !u!114 &5879679216130526726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,5 +91,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
   m_Name: Android Settings
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: 0}
+  m_LoaderManagerInstance: {fileID: 2747213734359325030}
   m_InitManagerOnStart: 0

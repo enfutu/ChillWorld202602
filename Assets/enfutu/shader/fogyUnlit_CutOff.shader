@@ -6,6 +6,8 @@ Shader "enfutu/fogyUnlit_CutOff"
         _MainColor ("MainColor", Color) = (0,0,0,0)
         _FogColor ("FogColor", Color) = (0,0,0,0)
         _MainTex ("Texture", 2D) = "white" {}
+        _EmissionTex ("EmissionTex", 2D) = "black" {}
+        _EmissionColor ("EmissionColor", Color) = (0,0,0,0)
     }
     SubShader
     {
@@ -48,8 +50,8 @@ Shader "enfutu/fogyUnlit_CutOff"
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST, _Center, _MainColor, _FogColor;
+            sampler2D _MainTex, _EmissionTex;
+            float4 _MainTex_ST, _Center, _MainColor, _FogColor, _EmissionColor;
 
             v2f vert (appdata v)
             {
@@ -78,12 +80,19 @@ Shader "enfutu/fogyUnlit_CutOff"
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv) * _MainColor;
 
-                clip(col.a - .5);
+                clip(col.a - .9);
 
+                //Emission
+                fixed4 em = tex2D(_EmissionTex, i.uv) * _EmissionColor;
+                
                 float d = max(0, length(i.wv - _Center) - 150);
                 d = saturate(lerp(0, 1, d * .02));
 
                 col.rgb = lerp(col.rgb, _FogColor, d);
+                em.rgb = lerp(em.rgb, 0, d * .8);
+
+                col.rgb += em.rgb;
+
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
