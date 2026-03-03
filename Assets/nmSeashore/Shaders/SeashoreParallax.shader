@@ -272,6 +272,7 @@
 			{
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 				
+				
 				float4 col = 0;
 				float2 scroll = float2(0, scrollTime());
 				

@@ -214,18 +214,20 @@
 				float formBorderRamp = max(fwidth(formTex), 0.05);
 				float formAmount = smoothstep(formMask + formBorderRamp * saturate(1 - POW2(formMask * 2 - 1)), formMask - formBorderRamp, formTex);
 				col.rgb += formAmount * .02;
-				
+
+
 				// フレネル反射
 				float3 worldViewDir = UnityObjectToWorldDir(viewDir);
 				float fresnel = 1 - dot(worldNormal, -worldViewDir);
 				fresnel = saturate(fresnel * fresnel * fresnel * fresnel * fresnel * 0.98 + 0.02);
 				
-				float smoothness = lerp((smoothstep(1.0, 0.9, fresnel) * 0.5 + 0.5) * shore.w, 0.5, formAmount);
-				float mipLevel = (1 - smoothness) * UNITY_SPECCUBE_LOD_STEPS;
+				//float smoothness = lerp((smoothstep(1.0, 0.9, fresnel) * 0.5 + 0.5) * shore.w, 0.5, formAmount);
+				//float mipLevel = (1 - smoothness) * UNITY_SPECCUBE_LOD_STEPS;
 				
-				float3 reflDir = reflect(worldViewDir, normalize(worldNormal));
-				half3 reflColor = DecodeHDR(UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mipLevel), unity_SpecCube0_HDR);
-				col.rgb += lerp(col.rgb, reflColor, fresnel) * _ReflectionIntensity * shore.w;
+				//float3 reflDir = reflect(worldViewDir, normalize(worldNormal));
+				//half3 reflColor = DecodeHDR(UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mipLevel), unity_SpecCube0_HDR);
+				//col.rgb += lerp(col.rgb, reflColor, fresnel) * _ReflectionIntensity * shore.w;
+				col.rgb += lerp(col.rgb, _FogColor, fresnel) * _ReflectionIntensity * shore.w;
 				
 				#if APPLY_SUN_SPECULAR
 				// 太陽の映り込み
@@ -234,10 +236,12 @@
 				#endif
 				
 				// ワールドの色合いに適応させる
-                float shadow = SHADOW_ATTENUATION(i);
-                float3 lighting = i.diff * shadow + i.ambient;
-                col.rgb *= lighting;
-                UNITY_APPLY_FOG(i.fogCoord, col);
+                //float shadow = SHADOW_ATTENUATION(i);
+                //float3 lighting = i.diff * shadow + i.ambient;
+                //col.rgb *= lighting;
+                col.rgb *= .1;
+                
+				UNITY_APPLY_FOG(i.fogCoord, col);
 				#endif
 				
 				#if DEBUG_BORDER_LINE
@@ -246,7 +250,7 @@
 
 				//Add
 				float3 wv = mul(unity_ObjectToWorld, i.localPos);
-				float d = max(0, length(wv - _Center) - 150);
+				float d = max(0, length(wv - _Center) - 50);
                 d = saturate(lerp(0, 1, d * .005));
 				col.rgb = lerp(col.rgb, _FogColor, d);
 

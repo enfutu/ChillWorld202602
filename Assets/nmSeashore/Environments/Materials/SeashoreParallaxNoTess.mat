@@ -43,45 +43,45 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints:
     - _FrontWaveNoiseLevel: 8
-    - _NoiseOctaves: 4
-    - _NumberOfWaves: 10
-    - _SwellZoneBuffer: 20
+    - _NoiseOctaves: 1
+    - _NumberOfWaves: 3
+    - _SwellZoneBuffer: 2
     - _TimeDistortionNoiseLevel: 1
     m_Floats:
     - _ApplySunSpecular: 0
     - _AttenuationScale: 0.01
-    - _BackFormLength: 178
-    - _BackwashVelocity: 0.03
+    - _BackFormLength: 100
+    - _BackwashVelocity: 0.01
     - _BackwashVelocityRange: 0.002
     - _BeachSlope: 0.01
     - _DebugDividerLine: 0
     - _DebugPreviewMask: 0
     - _DebugTriangle: 0
     - _DebugWaveHeightVisualize: 0
-    - _FarWaveDecayDistance: 65.5
-    - _FarWaveHeight: 2.64
+    - _FarWaveDecayDistance: 99
+    - _FarWaveHeight: 5.2
     - _FormShadow: 0
-    - _FrontWaveWidth: 111
-    - _Interval: 60
-    - _InvIOR: 0.5
+    - _FrontWaveWidth: 150
+    - _Interval: 30
+    - _InvIOR: 1
     - _ManualTimeOffset: 0
-    - _NormalAmount: 0.3
+    - _NormalAmount: 0.5
     - _ReflectionIntensity: 5
-    - _SeaLevel: 0.3
+    - _SeaLevel: 1
     - _SideScrollOffset: 0
-    - _SideScrollSpeed: 1
+    - _SideScrollSpeed: 0
     - _SourceAngleCos: 0.9999891
     - _SpecularSoftEdge: 0.0005
     - _Steepness: 1
     - _SunBrightnessMultiplier: 10
-    - _TimeDistortionPower: 1.5
-    - _TimeDistortionWidth: 0.05
-    - _TimeScale: 0.05
-    - _WaveBreakThreshold: 0.78
-    - _WavePower: 2
-    - _WaveWidth: 109
+    - _TimeDistortionPower: 0.1
+    - _TimeDistortionWidth: 0.1
+    - _TimeScale: 0.15
+    - _WaveBreakThreshold: 0.9
+    - _WavePower: 10
+    - _WaveWidth: 25
     m_Colors:
-    - _Center: {r: -100, g: 0, b: -100, a: 0}
+    - _Center: {r: 50, g: 0, b: -100, a: 0}
     - _FogColor: {r: 0.043137256, g: 0.10196079, b: 0.16862746, a: 1}
     - _WetGroundTint: {r: 0.19321822, g: 0.2260069, b: 0.24528301, a: 0.49019608}
   m_BuildTextureStacks: []
