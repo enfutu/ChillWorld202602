@@ -7,23 +7,23 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mainground
-  m_Shader: {fileID: 4800000, guid: 61dfaeeda7ef44742b40324ecd77f87c, type: 3}
+  m_Name: mainground(grass)
+  m_Shader: {fileID: 4800000, guid: 3734ff878bd003f41a4447ee74b5f9a8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - BAKERY_MONOSH
+  - _ALPHATEST_ON
   - _BICUBIC_SAMPLING_ON
   - _NORMALMAP_ON
   - _REFLECTIONS_ON
   - _SPECULAR_HIGHLIGHTS_ON
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - ALWAYS
   m_LockedProperties: 
@@ -139,8 +139,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 73de83d2d419bad4aadc7b6cea4cf9d1, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 2800000, guid: 63cfbcbe8c764d34aa235ad6f4b60508, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: a1c9afcb10cc38648bc79d30e5e7ccd2, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 252658c470aa4d14b9794a5f8cd32805, type: 3}
@@ -155,7 +159,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: f38232d5e392b97459a153534446fb70, type: 3}
+        m_Texture: {fileID: 2800000, guid: 97a93a35a55d1ae42a6046110dea52f4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -195,7 +199,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RoughnessMap:
-        m_Texture: {fileID: 2800000, guid: a05a40a2d0ac02e47918599217a7170a, type: 3}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowMask:
+        m_Texture: {fileID: 2800000, guid: b06b17dca686c9548b8e549876d550be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -222,7 +230,7 @@ Material:
     - _AlphaMaskChannel: 0
     - _AlphaMaskOpacity: 1
     - _AlphaSource: 0
-    - _AlphaToMask: 0
+    - _AlphaToMask: 1
     - _ApplyHeightOffset: 0
     - _AreaLitOcclusionUVSet: 0
     - _AreaLitRoughnessMultiplier: 1
@@ -239,7 +247,7 @@ Material:
     - _BakeryLMSpecStrength: 1
     - _BakeryMode: 3
     - _BicubicSampling: 1
-    - _BlendMode: 0
+    - _BlendMode: 1
     - _Brightness: 1
     - _BrightnessDet: 1
     - _BrightnessEmiss: 1
@@ -253,6 +261,7 @@ Material:
     - _ContrastPost: 1
     - _Culling: 2
     - _Cutoff: 0.5
+    - _Cutout: 0.214
     - _DetailMainTexBlend: 3
     - _DetailMainTexStrength: 1
     - _DetailMaskChannel: 0
@@ -293,7 +302,7 @@ Material:
     - _HeightMaskChannel: 0
     - _HeightOffset: 0
     - _HeightSteps: 8
-    - _HeightStrength: 0
+    - _HeightStrength: 0.03
     - _Hue: 0
     - _HueDet: 0
     - _HueEmiss: 0
@@ -371,7 +380,7 @@ Material:
     - _SampleCustomLUT: 0
     - _SampleMetallic: 0
     - _SampleOcclusion: 0
-    - _SampleRoughness: 1
+    - _SampleRoughness: 0
     - _Saturation: 1
     - _SaturationDet: 1
     - _SaturationEmiss: 1
@@ -457,6 +466,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LTCGI_DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
     - _LTCGI_SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     - _PuddleTint: {r: 0, g: 0, b: 0, a: 0.1}
     - _RainScale: {r: 1, g: 1, b: 0, a: 0}
     - _RippleScale: {r: 50, g: 50, b: 0, a: 0}
