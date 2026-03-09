@@ -33,6 +33,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2b27dbc2e51ad7c49988cb87637208da, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
+    - _HotaruMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: f56cbe66786f2d44cba0f76fcaa17e65, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -42,46 +46,47 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
-    - _FrontWaveNoiseLevel: 8
+    - _FrontWaveNoiseLevel: 3
     - _NoiseOctaves: 1
     - _NumberOfWaves: 3
-    - _SwellZoneBuffer: 2
+    - _SwellZoneBuffer: 1
     - _TimeDistortionNoiseLevel: 1
     m_Floats:
     - _ApplySunSpecular: 0
-    - _AttenuationScale: 0.01
-    - _BackFormLength: 100
-    - _BackwashVelocity: 0.01
+    - _AttenuationScale: 1
+    - _BackFormLength: 68
+    - _BackwashVelocity: 0
     - _BackwashVelocityRange: 0.002
     - _BeachSlope: 0.01
     - _DebugDividerLine: 0
     - _DebugPreviewMask: 0
     - _DebugTriangle: 0
     - _DebugWaveHeightVisualize: 0
-    - _FarWaveDecayDistance: 99
-    - _FarWaveHeight: 5.2
+    - _FarWaveDecayDistance: 1
+    - _FarWaveHeight: 0
     - _FormShadow: 0
-    - _FrontWaveWidth: 150
-    - _Interval: 30
+    - _FrontWaveWidth: 51
+    - _Interval: 16
     - _InvIOR: 1
     - _ManualTimeOffset: 0
-    - _NormalAmount: 0.5
+    - _NormalAmount: 0.04
     - _ReflectionIntensity: 5
     - _SeaLevel: 1
     - _SideScrollOffset: 0
     - _SideScrollSpeed: 0
-    - _SourceAngleCos: 0.9999891
-    - _SpecularSoftEdge: 0.0005
+    - _SourceAngleCos: 1
+    - _SpecularSoftEdge: 0.29289323
     - _Steepness: 1
-    - _SunBrightnessMultiplier: 10
-    - _TimeDistortionPower: 0.1
+    - _SunBrightnessMultiplier: 2
+    - _TimeDistortionPower: 3
     - _TimeDistortionWidth: 0.1
     - _TimeScale: 0.15
-    - _WaveBreakThreshold: 0.9
-    - _WavePower: 10
-    - _WaveWidth: 25
+    - _WaveBreakThreshold: 0
+    - _WavePower: 50
+    - _WaveWidth: 41
     m_Colors:
     - _Center: {r: 50, g: 0, b: -100, a: 0}
-    - _FogColor: {r: 0.043137256, g: 0.10196079, b: 0.16862746, a: 1}
-    - _WetGroundTint: {r: 0.19321822, g: 0.2260069, b: 0.24528301, a: 0.49019608}
+    - _FogColor: {r: 0.119170524, g: 0.15858068, b: 0.24528301, a: 1}
+    - _HotaruColor: {r: 0.0047169924, g: 0.6452458, b: 1, a: 1}
+    - _WetGroundTint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

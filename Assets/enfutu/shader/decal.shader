@@ -7,6 +7,7 @@ Shader "enfutu/decal"
         _MainTex ("Texture", 2D) = "white" {}
         _MainColor ("MainColor", Color) = (0,0,0,1)
         _ShadowMask ("ShadowMask", 2D) = "white" {}
+        _Edge ("EdgeValue", range(0, 1)) = 0
     }
     SubShader
     {
@@ -49,7 +50,7 @@ Shader "enfutu/decal"
 
             sampler2D _MainTex, _Mask, _ShadowMask;
             float4 _MainTex_ST, _MainColor;
-            float _Cutout;
+            float _Cutout, _Edge;
 
             v2f vert (appdata v)
             {
@@ -80,7 +81,7 @@ Shader "enfutu/decal"
                 float2 st = i.uv.xy;
                 fixed4 col = tex2D(_MainTex, st);
                 
-                col.a = saturate(mask + .5);
+                col.a = saturate(mask + _Edge);
 
                 col *= _MainColor;
 

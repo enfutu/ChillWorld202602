@@ -22,7 +22,8 @@ int _TimeDistortionNoiseLevel;
 float _WaterDistortionScale, _InvIOR;
 
 //Add
-float4 _Center, _FogColor;
+float4 _Center, _FogColor, _HotaruColor;
+sampler2D _HotaruMask;
 
 // index番目の波の力
 inline float wavePower(int index, float x)

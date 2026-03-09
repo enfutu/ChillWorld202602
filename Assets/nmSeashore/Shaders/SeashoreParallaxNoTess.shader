@@ -4,6 +4,8 @@
     {
 		_Center ("Center", Vector) = (0,0,0,0) 
 		_FogColor ("FogColor", Color) = (0,0,0,0)
+		_HotaruMask ("HotaruMask", 2D) = "white"{}
+		_HotaruColor ("HotaruColor", Color) = (0,0,0,0)
 
         _TimeScale ("Time Scale", Float) = 0.175
 		_ManualTimeOffset ("Manual Time Offset", Float) = 0
@@ -207,40 +209,39 @@
 				#if DEBUG_PREVIEW_MASK
 				col = shore;
 				#else
-				float frontFormTex = shore.y * 2;
+				float frontFormTex = shore.y * 1.1;
 				float backFormTex = shore.x;
 				float formMask = frontFormTex + lerp(backFormTex, 0, saturate(frontFormTex));
 				float formTex = tex2D(_FormMask, pos * 0.03333333 + normal.xy * 0.01).x;
 				float formBorderRamp = max(fwidth(formTex), 0.05);
 				float formAmount = smoothstep(formMask + formBorderRamp * saturate(1 - POW2(formMask * 2 - 1)), formMask - formBorderRamp, formTex);
-				col.rgb += formAmount * .02;
+				col.rgb += formAmount * _HotaruColor * shore.w * 3;
 
-
+				
 				// フレネル反射
 				float3 worldViewDir = UnityObjectToWorldDir(viewDir);
 				float fresnel = 1 - dot(worldNormal, -worldViewDir);
 				fresnel = saturate(fresnel * fresnel * fresnel * fresnel * fresnel * 0.98 + 0.02);
 				
-				//float smoothness = lerp((smoothstep(1.0, 0.9, fresnel) * 0.5 + 0.5) * shore.w, 0.5, formAmount);
-				//float mipLevel = (1 - smoothness) * UNITY_SPECCUBE_LOD_STEPS;
+				float smoothness = lerp((smoothstep(1.0, 0.9, fresnel) * 0.5 + 0.5) * shore.w, 0.5, formAmount);
+				float mipLevel = (1 - smoothness) * UNITY_SPECCUBE_LOD_STEPS;
 				
-				//float3 reflDir = reflect(worldViewDir, normalize(worldNormal));
-				//half3 reflColor = DecodeHDR(UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mipLevel), unity_SpecCube0_HDR);
-				//col.rgb += lerp(col.rgb, reflColor, fresnel) * _ReflectionIntensity * shore.w;
-				col.rgb += lerp(col.rgb, _FogColor, fresnel) * _ReflectionIntensity * shore.w;
+			    float3 reflDir = reflect(worldViewDir, normalize(worldNormal));
+				half3 reflColor = DecodeHDR(UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mipLevel), unity_SpecCube0_HDR);
+				col.rgb += lerp(col.rgb, reflColor, fresnel) * _ReflectionIntensity * shore.w;			
 				
 				#if APPLY_SUN_SPECULAR
 				// 太陽の映り込み
 				float highlight = smoothstep(_SourceAngleCos - _SpecularSoftEdge * (mipLevel + 1), _SourceAngleCos, dot(reflDir, _WorldSpaceLightPos0));	
-				col += (_LightColor0 * highlight * _SunBrightnessMultiplier * beachMask);
+				col += (_HotaruColor * highlight * _SunBrightnessMultiplier * beachMask);
 				#endif
-				
+
 				// ワールドの色合いに適応させる
                 //float shadow = SHADOW_ATTENUATION(i);
                 //float3 lighting = i.diff * shadow + i.ambient;
                 //col.rgb *= lighting;
-                col.rgb *= .1;
-                
+				col.rgb *= .1;
+
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				#endif
 				
@@ -251,10 +252,13 @@
 				//Add
 				float3 wv = mul(unity_ObjectToWorld, i.localPos);
 				float d = max(0, length(wv - _Center) - 50);
-                d = saturate(lerp(0, 1, d * .005));
+                d = saturate(lerp(0, 1, d * .0045));
+				
 				col.rgb = lerp(col.rgb, _FogColor, d);
 
-                return col;
+				//col.rgb = hitResult;
+
+                return saturate(col);
 			}
 	        ENDCG
 		}

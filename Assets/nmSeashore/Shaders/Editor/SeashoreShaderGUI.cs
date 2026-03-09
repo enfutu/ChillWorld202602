@@ -12,6 +12,8 @@ namespace nmSeashore
 		//Add
 		MaterialProperty _Center;
 		MaterialProperty _FogColor;
+		MaterialProperty _HotaruMask;
+		MaterialProperty _HotaruColor;
 
 
         MaterialProperty _TimeScale;
@@ -140,6 +142,8 @@ namespace nmSeashore
 			//Add
 			,{ "_Center", "Center" }
 			,{ "_FogColor", "FogColor" }
+			,{ "_HotaruMask", "HotaruMask" }
+			,{ "_HotaruColor", "HotaruColor" }
 
 		};
 
@@ -196,6 +200,8 @@ namespace nmSeashore
 			//Add
 			,{ "_Center", "Center" }
             ,{ "_FogColor", "FogColor" }
+            ,{ "_HotaruMask", "HotaruMask" }
+            ,{ "_HotaruColor", "HotaruColor" }
         };
 
 		Dictionary<string, string> lang;
@@ -297,6 +303,8 @@ namespace nmSeashore
 
 			Add(_Center);
 			Add(_FogColor);
+			Add(_HotaruMask);
+			Add(_HotaruColor);
 
 
 			AddMiniTexture(_GroundTex);
